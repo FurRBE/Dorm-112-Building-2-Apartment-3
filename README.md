@@ -98,3 +98,11 @@ src/
 git remote add origin https://github.com/FurRBE/Dorm-112-Building-2-Apartment-3.git
 git push -u origin main
 ```
+
+## 开发期快捷键（仅 `npm run dev` 生效，生产构建里会被移除）
+
+| 键 | 作用 |
+| --- | --- |
+| `1` / `2` / `3` | 直接跳到寝室 / 阳台 / 走廊，方便调画面 |
+| `H` `J` `K` `L` | 把玩家瞬移 ±120（左 / 下 / 上 / 右） |
+| `9` | 调试用：标记四位舍友都聊过，方便测结算 |
