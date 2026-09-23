@@ -642,7 +642,7 @@ export class UIScene extends Phaser.Scene {
       })
       .setOrigin(0.5, 0.5);
     btn.add([bg, label]);
-    const hit = this.add.circle(W - 170, 566, 78, 0x000000, 0.001);
+    const hit = this.add.zone(W - 170, 566, 156, 156).setOrigin(0.5, 0.5);
     hit.setInteractive(new Phaser.Geom.Circle(78, 78, 78), Phaser.Geom.Circle.Contains);
     hit.on('pointerdown', () => {
       sfx.click();
