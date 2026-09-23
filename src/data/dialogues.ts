@@ -155,6 +155,6 @@ export const ENDING: Line[] = [
   { who: 'pang', text: '（含糊地）零食在我抽屉第二格，谁都能拿，反正我明天买新的。' },
   { who: 'k', text: '谁把门反锁一下。' },
   { who: 'wei', text: '锁了。阳台的衣服我收进来了，挂在你床头。' },
-  { who: 'narration', text: '112 寝 · 2栋 · 3号房。' },
+  { who: 'narration', text: '三公寓二号楼 · 112 寝。' },
   { who: 'narration', text: '第 一 夜 · 完' },
 ];

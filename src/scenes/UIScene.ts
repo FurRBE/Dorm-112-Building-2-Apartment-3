@@ -672,7 +672,7 @@ export class UIScene extends Phaser.Scene {
       })
       .setOrigin(0.5, 0.5);
     const t2 = this.add
-      .text(W / 2, 286, '112 寝 · 2栋 3号房', {
+      .text(W / 2, 286, '三公寓二号楼 · 112 寝', {
         fontFamily: FONT,
         fontSize: '24px',
         color: C.accent,

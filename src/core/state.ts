@@ -25,7 +25,7 @@ export function allTalked(): boolean {
 }
 
 export const LOCATION_NAME: Record<SceneKey, string> = {
-  dorm: '112 寝 · 2栋3号房',
-  balcony: '112 寝 · 阳台',
-  corridor: '2栋 3楼 · 走廊',
+  dorm: '三公寓二号楼 · 112 寝',
+  balcony: '三公寓二号楼 · 112 阳台',
+  corridor: '三公寓二号楼 · 三楼走廊',
 };

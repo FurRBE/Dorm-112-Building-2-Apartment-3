@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "H5 2D 漫游小游戏 —— 寝室 112 / 2栋 / 3号房",
+  "description": "H5 2D 漫游小游戏 —— 三公寓二号楼（三公二）112 寝",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",

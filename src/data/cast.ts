@@ -26,7 +26,7 @@ export const CAST: Record<CastId, CastMember> = {
   you: {
     id: 'you',
     name: '我',
-    role: '112 寝 5 号床 · 刚洗完澡',
+    role: '三公二 112 寝 5 号床 · 刚洗完澡',
     skin: '#e8bd93',
     skinDark: '#c8946b',
     hair: '#2b2320',
