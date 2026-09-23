@@ -1,0 +1,20 @@
+{
+  "name": "dorm-112-apartment-3",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "H5 2D 漫游小游戏 —— 寝室 112 / 2栋 / 3号房",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^7.1.7"
+  }
+}

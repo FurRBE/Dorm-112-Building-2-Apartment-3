@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#12100e" />
+    <meta name="description" content="112寝·2栋3号房 —— H5 2D 漫游小游戏" />
+    <title>112寝 · 2栋3号房 | 2D 漫游</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #0d0c0b;
+        font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
+      }
+
+      #game-root {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at 50% 40%, #221f1c 0%, #0d0c0b 70%);
+      }
+
+      #game-root canvas {
+        display: block;
+        touch-action: none;
+      }
+
+      #boot-cover {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        background: #12100e;
+        color: #e8e2d2;
+        letter-spacing: 0.28em;
+        transition: opacity 0.5s ease;
+        z-index: 10;
+      }
+
+      #boot-cover.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #boot-cover .title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      #boot-cover .sub {
+        font-size: 12px;
+        color: #8f8878;
+        letter-spacing: 0.2em;
+      }
+
+      #boot-cover .bar {
+        width: 160px;
+        height: 3px;
+        border-radius: 3px;
+        background: #2a2723;
+        overflow: hidden;
+      }
+
+      #boot-cover .bar > i {
+        display: block;
+        width: 40%;
+        height: 100%;
+        background: #9db05e;
+        animation: slide 1.1s ease-in-out infinite;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(-110%);
+        }
+        100% {
+          transform: translateX(260%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game-root"></div>
+    <div id="boot-cover">
+      <div class="title">112 寝</div>
+      <div class="bar"><i></i></div>
+      <div class="sub">2栋 · 3号房 · 加载中</div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
