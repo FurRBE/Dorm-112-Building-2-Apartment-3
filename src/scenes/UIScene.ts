@@ -300,7 +300,9 @@ export class UIScene extends Phaser.Scene {
       const bg = this.nameBg;
       bg.clear();
       bg.fillStyle(num('#3a3630'), 0.95);
-      bg.fillRoundedRect(64 + 200, 434 + 24, 96, 42, 12);
+      // 他人名牌用 140（两字）或 168（三字），旁白同为两字，宽度需一致，
+      // 否则文字会溢出名牌右边缘。
+      bg.fillRoundedRect(64 + 200, 434 + 24, 140, 42, 12);
     } else {
       const m = CAST[who as Exclude<Speaker, 'narration'>];
       this.portraitPlate.setVisible(true);

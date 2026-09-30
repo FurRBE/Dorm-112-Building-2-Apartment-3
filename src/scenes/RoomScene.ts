@@ -28,6 +28,8 @@ export interface SayRequest {
 
 const SPEED = 118;
 const SPRINT = 198;
+/** 交互提示气泡的高度（文字垂直居中的基准） */
+const PROMPT_H = 26;
 
 export abstract class RoomScene extends Phaser.Scene {
   protected player!: Player;
@@ -245,7 +247,9 @@ export abstract class RoomScene extends Phaser.Scene {
         fontSize: '13px',
         color: C.uiText,
       })
-      .setOrigin(0.5, 0.5);
+      .setOrigin(0.5, 0.5)
+      // 气泡矩形画在 y 属于 [-h, 0]，文字必须上移 h/2 才真正居中
+      .setY(-PROMPT_H / 2);
     this.prompt.add([this.promptBg, this.promptText]);
   }
 
@@ -434,7 +438,7 @@ export abstract class RoomScene extends Phaser.Scene {
       const hint = isTouch ? `点按   ${best.label}` : `E   ${best.label}`;
       if (this.promptText.text !== hint) {
         this.promptText.setText(hint);
-        this.drawPrompt(this.promptText.width + 26, 26);
+        this.drawPrompt(this.promptText.width + 26, PROMPT_H);
       }
       const view = this.cameras.main.worldView;
       let py = this.player.y + this.player.bubbleY - 6;
